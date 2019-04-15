@@ -105,7 +105,7 @@ public class MathTask {
                     }
                 }
             }
-            if (operands.get(0) == 24){
+            if (operands.get(0) / 24 - 1 < 0.001 && operands.get(0) / 24 - 1 >= 0){
                 System.out.println(result.get(j));
                 return true;
             }
