@@ -36,6 +36,7 @@ public class MathTask {
         for (int i = 0; i < 24; i++) {
             for (int j = 0; j < 64; j++) {
                 StringBuilder temp = new StringBuilder(numbersCombinations.get(i).substring(0, 2));
+                temp.append(operationsCombinations.get(j).charAt(0));
                 temp.append(numbersCombinations.get(i).charAt(2));
                 temp.append(operationsCombinations.get(j).charAt(1));
                 temp.append(numbersCombinations.get(i).charAt(3));
@@ -52,15 +53,14 @@ public class MathTask {
             }
             for (int j = 0; j < 64; j++) {
                 StringBuilder temp = new StringBuilder(numbersCombinations.get(i));
-                temp.append(operationsCombinations.get(j).charAt(0));
-                temp.append(operationsCombinations.get(j).charAt(1));
-                temp.append(operationsCombinations.get(j).charAt(2));
+                temp.append(operationsCombinations.get(j));
                 result.add(temp.toString());
             }
             for (int j = 0; j < 64; j++) {
                 StringBuilder temp = new StringBuilder(numbersCombinations.get(i).substring(0, 2));
                 temp.append(operationsCombinations.get(j).charAt(0));
-                temp.append(numbersCombinations.get(i).substring(2, 4));
+                temp.append(numbersCombinations.get(i).charAt(2));
+                temp.append(numbersCombinations.get(i).charAt(3));
                 temp.append(operationsCombinations.get(j).charAt(1));
                 temp.append(operationsCombinations.get(j).charAt(2));
                 result.add(temp.toString());
